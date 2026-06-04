@@ -46,7 +46,7 @@ export default function Home() {
               className="group relative px-8 py-3 bg-slate-900 text-white font-bold tracking-widest uppercase text-xs overflow-hidden hover:bg-slate-800 transition-all shadow-lg shadow-slate-200"
             >
               <span className="relative z-10 flex items-center gap-2">
-                View Projects <ArrowRightIcon href="" className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                View Projects <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
           </div>
