@@ -15,11 +15,11 @@ This project uses a **dual-environment basePath** pattern for local dev + GitHub
 
 ```tsx
 // In page.tsx - for images
-const basePath = process.env.NODE_ENV === "production" ? "/gfbs3-portfolio-demo" : "";
+const basePath = process.env.NODE_ENV === "production" ? "/michael-tran.github.io" : "";
 src={`${basePath}/me.png`}
 
 // In next.config.ts - for routing
-basePath: isProd ? "/gfbs3-portfolio-demo" : "",
+basePath: isProd ? "/michael-tran.github.io" : "",
 ```
 
 **Critical**: When users fork this repo, they must update the repo name in BOTH files.

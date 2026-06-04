@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const basePath = process.env.NODE_ENV === "production" ? "/gfbs3-portfolio-demo" : "";
+const basePath = process.env.NODE_ENV === "production" ? "/michael-tran.github.io" : "";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
             href="/" 
             className="text-lg font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-400 hover:to-cyan-400 transition-all duration-300"
           >
-            GITFOLIO
+            Michael Tran
           </Link>
           <div className="flex gap-8 text-xs font-bold tracking-widest uppercase text-cyan-700/80">
             <Link href="#work" className="hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">PROJECTS</Link>
@@ -33,18 +33,12 @@ export default function Home() {
         {/* Hero Section */}
         <section className="py-20 md:py-32 space-y-8 relative">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-950/20 text-cyan-400 text-xs font-bold tracking-widest uppercase animate-pulse">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,1)]" />
-              READY TO LAUNCH
-            </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.1] drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">
-              BUILD YOUR <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-purple-500 to-cyan-500 animate-gradient-x">DEVELOPER PORTFOLIO</span> <br />
-              IN MINUTES
+              Senior DevSecOps and Cloud-Native Backend Architect
             </h1>
           </div>
           <p className="text-lg md:text-xl text-cyan-100/70 max-w-2xl leading-relaxed font-light border-l-2 border-fuchsia-500/50 pl-6">
-            A beginner-friendly portfolio template that showcases your projects beautifully. Fork it, customize it, deploy it—no design skills required.
+            Leveraging over six years of experience driving mission-critical AI, scalable ETL pipelines, and robust Kubernetes infrastructure to automate enterprise CI/CD and engineer highly resilient, cloud-native solutions.
           </p>
           <div className="pt-8 flex gap-6">
             <Link 
@@ -52,7 +46,7 @@ export default function Home() {
               className="group relative px-8 py-3 bg-cyan-950/30 border border-cyan-500/50 text-cyan-300 font-bold tracking-widest uppercase text-sm overflow-hidden hover:bg-cyan-900/50 transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
             >
               <span className="relative z-10 flex items-center gap-2">
-                GET STARTED <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                Want to learn more? <ArrowRightIcon href="" className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
             </Link>
@@ -63,43 +57,57 @@ export default function Home() {
         <section id="work" className="py-20 space-y-12">
           <div className="flex items-end justify-between border-b border-cyan-900/30 pb-4">
             <h2 className="text-2xl font-bold tracking-widest text-fuchsia-400 drop-shadow-[0_0_8px_rgba(232,121,249,0.6)]">
-              // YOUR_PROJECTS
+              // PROJECTS
             </h2>
-            <span className="text-xs font-mono text-cyan-700">Showcase what you&apos;ve built with style</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Project 1 */}
             <ProjectCard 
-              title="PROJECT_ONE"
-              description="Your first amazing project goes here. Describe what problem it solves and the tech you used to build it."
-              tags={["REACT", "NEXTJS", "TAILWIND"]}
+              title="Computer Vision Traffic Pipeline"
+              description="Architected and deployed AI-driven computer vision pipelines at Transurban for automated vehicle detection, leveraging Python to process high-volume traffic data into PostgreSQL."
+              tags={["PYTHON", "POSTGRESQL", "KUBERNETES", "HELM", "GITHUB ACTIONS"]}
               color="cyan"
-              href="#"
+              href="https://www.transurban.com/about-us/innovation"
             />
-            {/* Project 2 */}
+
             <ProjectCard 
-              title="PROJECT_TWO"
-              description="Your second project showcase. Tell visitors what makes this project special and what you learned building it."
-              tags={["JAVASCRIPT", "API", "CSS"]}
-              color="fuchsia"
-              href="#"
+              title="Resilient Enterprise ETL Infrastructure"
+              description="Accelerated production-readiness at Capital One during a $50B merger by engineering robust ETL pipelines using PySpark on AWS Glue and EMR, optimizing large-scale data processing across 13 databases."
+              tags={["PYTHON", "PYSPARK", "AWS GLUE", "EMR", "CASSANDRA", "JENKINS"]}
+              color="cyan"
+              href="https://finance.yahoo.com/markets/stocks/articles/capital-one-travel-adds-discover-192042973.html"
             />
-            {/* Project 3 */}
+
             <ProjectCard 
-              title="PROJECT_THREE"
-              description="Another project to highlight your skills. Share the impact or results of this work."
-              tags={["TYPESCRIPT", "NODE", "EXPRESS"]}
-              color="purple"
-              href="#"
+              title="Secure GovCloud Microservices"
+              description="Owned the end-to-end SDLC at IBM for critical applications, deploying high-availability Java and Python microservices on AWS GovCloud EC2 and Snowball with secure OAuth endpoints."
+              tags={["JAVA", "PYTHON", "DJANGO", "AWS EC2", "KAFKA", "JENKINS"]}
+              color="cyan"
+              href="https://jackpoulson.substack.com/p/exclusive-inside-trident-spectre"
             />
-            {/* Project 4 */}
+
             <ProjectCard 
-              title="PROJECT_FOUR"
-              description="Keep building and adding to your portfolio. Each project tells part of your developer story."
-              tags={["PYTHON", "DJANGO", "POSTGRESQL"]}
-              color="yellow"
-              href="#"
+              title="High-Volume Data Integration Workflow"
+              description="Architected comprehensive workflows at IBM using Apache NiFi to orchestrate high-volume Kafka topics, transitioning massive datasets into HDFS and real-time HBase storage with Splunk observability."
+              tags={["JAVA", "APACHE NIFI", "APACHE KAFKA", "HDFS", "HBASE", "SPLUNK"]}
+              color="cyan"
+              href="https://www.ibm.com/industries/federal"
+            />
+
+            <ProjectCard 
+              title="Automated Analytics & Document Processing"
+              description="Engineered automated ETL pipelines at Ambit Greenzone using Python and Pandas to ingest Google Analytics data, containerized applications with Docker, and built an AI-driven traffic pattern prototype."
+              tags={["PYTHON", "PANDAS", "NUMPY", "POSTGRESQL", "DOCKER"]}
+              color="cyan"
+              href="https://www.consumerfinance.gov/data-research/research-reports/credit-card-late-fees/"
+            />
+
+            <ProjectCard 
+              title="Mission-Critical Geospatial Defense System"
+              description="Engineered tactical applications at Lockheed Martin aggregating geospatial feeds for situational awareness, while modernizing legacy interfaces using React and a Java Spring Boot backend."
+              tags={["REACT", "JAVA", "SPRING BOOT", "SELENIUM", "JENKINS"]}
+              color="cyan"
+              href="https://www.lockheedmartin.com/en-us/capabilities/undersea-warfare.html"
             />
           </div>
         </section>
@@ -108,9 +116,12 @@ export default function Home() {
         <section id="philosophy" className="py-20 grid md:grid-cols-12 gap-12 border-t border-cyan-900/30">
           <div className="md:col-span-4 space-y-8">
             <h2 className="text-2xl font-bold tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
-              {"// ABOUT_ME"}
+              {"// ABOUT ME"}
             </h2>
-            
+            <p className="text-base font-bold tracking-widest text-green-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
+              {"USER_AWAITING_INPUT..."}
+            </p>
+            <p>Initiating Subroutine: The Journey of Michael Tran.</p>
             {/* Profile Image - Replace src with your image in /public */}
             <div className="relative w-full aspect-[4/5] border border-cyan-500/30 rounded-sm overflow-hidden bg-cyan-950/30 group">
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(5,5,16,0.8)_100%)] z-10" />
@@ -118,7 +129,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(34,211,238,0.05)_1px,transparent_1px)] bg-[size:100%_4px] z-20 pointer-events-none" />
               
               <Image 
-                src={`${basePath}/me.png`}
+                src={`${basePath}/me.jpg`}
                 alt="Profile"
                 fill
                 className="object-cover z-0 opacity-60 group-hover:opacity-100 transition-all duration-500 grayscale group-hover:grayscale-0"
@@ -127,25 +138,53 @@ export default function Home() {
           </div>
           <div className="md:col-span-8 space-y-8 text-cyan-100/80 leading-relaxed font-light">
             <p>
-              Every developer has a unique journey. Share yours here—whether you&apos;re self-taught, a bootcamp grad, or transitioning careers. <strong className="text-fuchsia-400 font-bold">Your story matters.</strong> Talk about what drives you to code and the impact you want to make.
+              I am a tinkerer by design, a camper by choice, and a DevSecOps architect by pressure-cooking. My engineering philosophy doesn’t live in a textbook; it’s forged in the absolute, beautiful chaos of taking action first while explicitly broadcasting my coordinates so nobody gets caught in the blast radius.
             </p>
             <div className="p-6 bg-cyan-950/20 border border-cyan-500/20 rounded-sm relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-cyan-500" />
               <div className="grid grid-cols-2 gap-8 font-mono text-sm">
                 <div>
-                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">STACK_TRACE</h3>
+                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">PROTOCOLS</h3>
                   <ul className="space-y-2 text-cyan-200/70">
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> JavaScript / Python / TypeScript</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> React / Next.js / Node.js</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Git / GitHub / VS Code</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Active Listener</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Be open minded</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Feed that inner curiosity</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Learn through trials and fire</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Good enough for government work</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">PROTOCOLS</h3>
+                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">Languages & Frameworks</h3>
                   <ul className="space-y-2 text-cyan-200/70">
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Always learning</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Ship &gt; Perfect</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Open source contributor</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Python / Java / TypeScript / JavaScript</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Django / FastAPI / Spring Boot</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> React / Bootstrap</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">Data & Analytics</h3>
+                  <ul className="space-y-2 text-cyan-200/70">
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Apache Spark / PySpark / Databricks</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Apache Kafka / Apache NiFi / Airflow</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> PostgreSQL / Cassandra / DynamoDB / MySQL</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> HDFS / HBase / Snowflake / Pandas / NumPy</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">Cloud & DevSecOps</h3>
+                  <ul className="space-y-2 text-cyan-200/70">
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> AWS (Glue, EMR, EC2, S3, GovCloud)</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Kubernetes / Helm / Docker / LocalStack</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> GitHub Actions / Jenkins / Ansible / CloudFormation</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> SonarQube / FreeIPA / OAuth / Pre-commit</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">Testing & Observability</h3>
+                  <ul className="space-y-2 text-cyan-200/70">
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Pytest / JUnit / Mockito / Behave</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Selenium / Robot Framework / UI Testing</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Splunk / Grafana / Prometheus</li>
                   </ul>
                 </div>
               </div>
@@ -156,23 +195,10 @@ export default function Home() {
         {/* Contact */}
         <section id="contact" className="py-20 border-t border-cyan-900/30">
           <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
-              READY TO <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">LAUNCH?</span>
-            </h2>
-            <p className="text-cyan-200/60 text-lg">
-              Fork this template on GitHub and make it yours. Update the content, add your projects, and deploy to GitHub Pages in under 30 minutes.
-            </p>
             <div className="flex flex-col items-center gap-6">
-              <a 
-                href="https://github.com/ladykerr/gfbs3-portfolio-demo" 
-                className="px-10 py-4 bg-fuchsia-600 text-white font-bold tracking-widest uppercase text-sm hover:bg-fuchsia-500 transition-all hover:shadow-[0_0_30px_rgba(232,121,249,0.6)] hover:scale-105 duration-300 clip-path-polygon"
-              >
-                FORK ON GITHUB
-              </a>
               <div className="flex items-center gap-8 pt-4">
-                <SocialLink href="https://github.com" label="GITHUB" />
-                <SocialLink href="https://linkedin.com" label="LINKEDIN" />
-                <SocialLink href="https://twitter.com" label="TWITTER" />
+                <SocialLink href="https://github.com/michael-tran" label="GITHUB" />
+                <SocialLink href="https://linkedin.com/in/tran-the-man" label="LINKEDIN" />
               </div>
             </div>
           </div>
@@ -180,7 +206,7 @@ export default function Home() {
       </main>
 
       <footer className="py-8 text-center text-xs font-mono text-cyan-900/50 border-t border-cyan-900/20">
-        <p>Made with ❤️ by <a href="https://gh.io/gfb" target="_blank" rel="noopener noreferrer" className="text-cyan-700 hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">GitHub for Beginners</a> and <a href="https://gh.io/gfb-copilot" target="_blank" rel="noopener noreferrer" className="text-cyan-700 hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">GitHub Copilot</a></p>
+        <p>Made with <a href="https://www.gitfolio.in/" target="_blank" rel="noopener noreferrer" className="text-cyan-700 hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">GitFolio</a> and 🤖</p>
       </footer>
     </div>
   );
