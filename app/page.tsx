@@ -5,26 +5,26 @@ const basePath = process.env.NODE_ENV === "production" ? "/michael-tran.github.i
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#050510] text-cyan-50 font-mono selection:bg-fuchsia-500/30 selection:text-fuchsia-200 overflow-x-hidden">
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-slate-200 selection:text-slate-900 overflow-x-hidden">
       {/* Grid Background */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a2e_1px,transparent_1px),linear-gradient(to_bottom,#1a1a2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20" />
-        <div className="absolute bottom-0 left-0 right-0 h-[50vh] bg-gradient-to-t from-fuchsia-900/20 to-transparent opacity-30" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+        <div className="absolute bottom-0 left-0 right-0 h-[50vh] bg-gradient-to-t from-slate-50 to-transparent opacity-50" />
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050510]/80 backdrop-blur-md border-b border-cyan-900/30">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link 
             href="/" 
-            className="text-lg font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-400 hover:to-cyan-400 transition-all duration-300"
+            className="text-lg font-black tracking-tighter text-slate-900 transition-all duration-300"
           >
             Michael Tran
           </Link>
-          <div className="flex gap-8 text-xs font-bold tracking-widest uppercase text-cyan-700/80">
-            <Link href="#work" className="hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">PROJECTS</Link>
-            <Link href="#philosophy" className="hover:text-fuchsia-400 hover:drop-shadow-[0_0_5px_rgba(232,121,249,0.8)] transition-all">ABOUT</Link>
-            <Link href="#contact" className="hover:text-yellow-400 hover:drop-shadow-[0_0_5px_rgba(250,204,21,0.8)] transition-all">CONTACT</Link>
+          <div className="flex gap-8 text-[10px] font-bold tracking-widest uppercase text-slate-400">
+            <Link href="#work" className="hover:text-slate-900 transition-all">PROJECTS</Link>
+            <Link href="#philosophy" className="hover:text-slate-900 transition-all">ABOUT</Link>
+            <Link href="#contact" className="hover:text-slate-900 transition-all">CONTACT</Link>
           </div>
         </div>
       </nav>
@@ -33,30 +33,29 @@ export default function Home() {
         {/* Hero Section */}
         <section className="py-20 md:py-32 space-y-8 relative">
           <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.1] drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-slate-900 leading-[1.1]">
               Senior DevSecOps and Cloud-Native Backend Architect
             </h1>
           </div>
-          <p className="text-lg md:text-xl text-cyan-100/70 max-w-2xl leading-relaxed font-light border-l-2 border-fuchsia-500/50 pl-6">
+          <p className="text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed font-normal border-l-2 border-slate-200 pl-6">
             Leveraging over six years of experience driving mission-critical AI, scalable ETL pipelines, and robust Kubernetes infrastructure to automate enterprise CI/CD and engineer highly resilient, cloud-native solutions.
           </p>
           <div className="pt-8 flex gap-6">
             <Link 
               href="#work" 
-              className="group relative px-8 py-3 bg-cyan-950/30 border border-cyan-500/50 text-cyan-300 font-bold tracking-widest uppercase text-sm overflow-hidden hover:bg-cyan-900/50 transition-all hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
+              className="group relative px-8 py-3 bg-slate-900 text-white font-bold tracking-widest uppercase text-xs overflow-hidden hover:bg-slate-800 transition-all shadow-lg shadow-slate-200"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Want to learn more? <ArrowRightIcon href="" className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                View Projects <ArrowRightIcon href="" className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
             </Link>
           </div>
         </section>
 
         {/* Selected Work */}
         <section id="work" className="py-20 space-y-12">
-          <div className="flex items-end justify-between border-b border-cyan-900/30 pb-4">
-            <h2 className="text-2xl font-bold tracking-widest text-fuchsia-400 drop-shadow-[0_0_8px_rgba(232,121,249,0.6)]">
+          <div className="flex items-end justify-between border-b border-slate-200 pb-4">
+            <h2 className="text-xl font-black tracking-tighter text-slate-900">
               // PROJECTS
             </h2>
           </div>
@@ -105,7 +104,7 @@ export default function Home() {
             <ProjectCard 
               title="Mission-Critical Geospatial Defense System"
               description="Engineered tactical applications at Lockheed Martin aggregating geospatial feeds for situational awareness, while modernizing legacy interfaces using React and a Java Spring Boot backend."
-              tags={["REACT", "JAVA", "SPRING BOOT", "SELENIUM", "JENKINS"]}
+              tags={["REACT", "JAVA", "SPRING BOOT", "SELENIUM", "JENKINS", "SONARQUBE"]}
               color="cyan"
               href="https://www.lockheedmartin.com/en-us/capabilities/undersea-warfare.html"
             />
@@ -113,20 +112,17 @@ export default function Home() {
         </section>
 
         {/* Philosophy / Approach */}
-        <section id="philosophy" className="py-20 grid md:grid-cols-12 gap-12 border-t border-cyan-900/30">
+        <section id="philosophy" className="py-20 grid md:grid-cols-12 gap-12 border-t border-slate-200">
           <div className="md:col-span-4 space-y-8">
-            <h2 className="text-2xl font-bold tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
+            <h2 className="text-xl font-black tracking-tighter text-slate-900">
               {"// ABOUT ME"}
             </h2>
-            <p className="text-base font-bold tracking-widest text-green-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
-              {"USER_AWAITING_INPUT..."}
-            </p>
-            <p>Initiating Subroutine: The Journey of Michael Tran.</p>
+            <p className="text-sm font-medium text-slate-400">The Journey of Michael Tran.</p>
             {/* Profile Image - Replace src with your image in /public */}
-            <div className="relative w-full aspect-[4/5] border border-cyan-500/30 rounded-sm overflow-hidden bg-cyan-950/30 group">
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(5,5,16,0.8)_100%)] z-10" />
+            <div className="relative w-full aspect-[4/5] border border-slate-200 rounded-lg overflow-hidden bg-slate-50 group shadow-inner">
+              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(255,255,255,0.4)_100%)] z-10" />
               {/* Scanline effect */}
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(34,211,238,0.05)_1px,transparent_1px)] bg-[size:100%_4px] z-20 pointer-events-none" />
+              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:100%_4px] z-20 pointer-events-none" />
               
               <Image 
                 src={`${basePath}/me.jpg`}
@@ -136,52 +132,55 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="md:col-span-8 space-y-8 text-cyan-100/80 leading-relaxed font-light">
+          <div className="md:col-span-8 space-y-8 text-slate-600 leading-relaxed font-normal">
             <p>
               I am a tinkerer by design, a camper by choice, and a DevSecOps architect by pressure-cooking. My engineering philosophy doesn’t live in a textbook; it’s forged in the absolute, beautiful chaos of taking action first while explicitly broadcasting my coordinates so nobody gets caught in the blast radius.
             </p>
-            <div className="p-6 bg-cyan-950/20 border border-cyan-500/20 rounded-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-cyan-500" />
-              <div className="grid grid-cols-2 gap-8 font-mono text-sm">
+            <div className="p-8 bg-slate-50 border border-slate-200 rounded-xl relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-slate-900" />
+              <div className="grid grid-cols-2 gap-8 text-sm">
                 <div>
-                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">PROTOCOLS</h3>
-                  <ul className="space-y-2 text-cyan-200/70">
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Active Listener</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Be open minded</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Feed that inner curiosity</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Learn through trials and fire</li>
-                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Good enough for government work</li>
+                  <h3 className="text-slate-900 mb-4 tracking-widest uppercase text-[10px] font-black border-b border-slate-200 pb-2">PROTOCOLS</h3>
+                  <ul className="space-y-2 text-slate-500">
+                    <li className="flex items-center gap-2"><span className="text-slate-300">›</span> Active Listener</li>
+                    <li className="flex items-center gap-2"><span className="text-slate-300">›</span> Be open minded</li>
+                    <li className="flex items-center gap-2"><span className="text-slate-300">›</span> Feed that inner curiosity</li>
+                    <li className="flex items-center gap-2"><span className="text-slate-300">›</span> Learn through trials and fire</li>
+                    <li className="flex items-center gap-2"><span className="text-slate-300">›</span> Good enough for government work</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">Languages & Frameworks</h3>
-                  <ul className="space-y-2 text-cyan-200/70">
+                  <h3 className="text-slate-900 mb-4 tracking-widest uppercase text-[10px] font-black border-b border-slate-200 pb-2">Languages & Frameworks</h3>
+                  <ul className="space-y-2 text-slate-500">
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Python / Java / TypeScript / JavaScript</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Django / FastAPI / Spring Boot</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> React / Bootstrap</li>
                   </ul>
                 </div>
+
                 <div>
-                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">Data & Analytics</h3>
-                  <ul className="space-y-2 text-cyan-200/70">
+                  <h3 className="text-slate-900 mb-4 tracking-widest uppercase text-[10px] font-black border-b border-slate-200 pb-2">Data & Analytics</h3>
+                  <ul className="space-y-2 text-slate-500">
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Apache Spark / PySpark / Databricks</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Apache Kafka / Apache NiFi / Airflow</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> PostgreSQL / Cassandra / DynamoDB / MySQL</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> HDFS / HBase / Snowflake / Pandas / NumPy</li>
                   </ul>
                 </div>
+
                 <div>
-                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">Cloud & DevSecOps</h3>
-                  <ul className="space-y-2 text-cyan-200/70">
+                  <h3 className="text-slate-900 mb-4 tracking-widest uppercase text-[10px] font-black border-b border-slate-200 pb-2">Cloud & DevSecOps</h3>
+                  <ul className="space-y-2 text-slate-500">
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> AWS (Glue, EMR, EC2, S3, GovCloud)</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Kubernetes / Helm / Docker / LocalStack</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> GitHub Actions / Jenkins / Ansible / CloudFormation</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> SonarQube / FreeIPA / OAuth / Pre-commit</li>
                   </ul>
                 </div>
+
                 <div>
-                  <h3 className="text-cyan-400 mb-4 tracking-widest uppercase text-xs border-b border-cyan-800 pb-2">Testing & Observability</h3>
-                  <ul className="space-y-2 text-cyan-200/70">
+                  <h3 className="text-slate-900 mb-4 tracking-widest uppercase text-[10px] font-black border-b border-slate-200 pb-2">Testing & Observability</h3>
+                  <ul className="space-y-2 text-slate-500">
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Pytest / JUnit / Mockito / Behave</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Selenium / Robot Framework / UI Testing</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Splunk / Grafana / Prometheus</li>
@@ -193,7 +192,7 @@ export default function Home() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="py-20 border-t border-cyan-900/30">
+        <section id="contact" className="py-20 border-t border-slate-200">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <div className="flex flex-col items-center gap-6">
               <div className="flex items-center gap-8 pt-4">
@@ -205,8 +204,8 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="py-8 text-center text-xs font-mono text-cyan-900/50 border-t border-cyan-900/20">
-        <p>Made with <a href="https://www.gitfolio.in/" target="_blank" rel="noopener noreferrer" className="text-cyan-700 hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all">GitFolio</a> and 🤖</p>
+      <footer className="py-12 text-center text-[10px] font-bold tracking-widest uppercase text-slate-400 border-t border-slate-100">
+        <p>Built by Michael Tran &copy; {new Date().getFullYear()} — <a href="https://www.gitfolio.in/" target="_blank" rel="noopener noreferrer" className="text-slate-900 hover:underline">GitFolio</a></p>
       </footer>
     </div>
   );
@@ -220,33 +219,33 @@ function ProjectCard({ title, description, tags, color, href }: { title: string,
   const safeColor = validColors.includes(color) ? color : "cyan";
 
   const colorClasses = {
-    cyan: "group-hover:border-cyan-500/50 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]",
-    fuchsia: "group-hover:border-fuchsia-500/50 group-hover:shadow-[0_0_20px_rgba(232,121,249,0.2)]",
-    purple: "group-hover:border-purple-500/50 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.2)]",
-    yellow: "group-hover:border-yellow-500/50 group-hover:shadow-[0_0_20px_rgba(234,179,8,0.2)]",
+    cyan: "hover:border-slate-400 hover:shadow-xl hover:shadow-slate-100",
+    fuchsia: "hover:border-slate-400 hover:shadow-xl hover:shadow-slate-100",
+    purple: "hover:border-slate-400 hover:shadow-xl hover:shadow-slate-100",
+    yellow: "hover:border-slate-400 hover:shadow-xl hover:shadow-slate-100",
   };
 
   const textColors = {
-    cyan: "group-hover:text-cyan-400",
-    fuchsia: "group-hover:text-fuchsia-400",
-    purple: "group-hover:text-purple-400",
-    yellow: "group-hover:text-yellow-400",
+    cyan: "group-hover:text-slate-600",
+    fuchsia: "group-hover:text-slate-600",
+    purple: "group-hover:text-slate-600",
+    yellow: "group-hover:text-slate-600",
   };
 
   return (
-    <Link href={href} className={`group block space-y-4 p-6 bg-[#0a0a1a] border border-cyan-900/30 transition-all duration-300 ${colorClasses[safeColor]}`}>
+    <Link href={href} className={`group block space-y-4 p-8 bg-white border border-slate-200 rounded-xl transition-all duration-500 ${colorClasses[safeColor]}`}>
       <div className="flex justify-between items-start">
-        <h3 className={`text-xl font-bold text-white tracking-wider transition-colors ${textColors[safeColor]}`}>
+        <h3 className={`text-lg font-black text-slate-900 tracking-tight transition-colors ${textColors[safeColor]}`}>
           {title}
         </h3>
-        <ArrowUpRightIcon className={`w-5 h-5 text-cyan-700 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 ${textColors[safeColor]}`} />
+        <ArrowUpRightIcon className={`w-4 h-4 text-slate-300 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-slate-900`} />
       </div>
-      <p className="text-sm text-cyan-100/60 leading-relaxed font-light border-l border-cyan-900/50 pl-4">
+      <p className="text-sm text-slate-500 leading-relaxed font-normal">
         {description}
       </p>
       <div className="flex gap-2 pt-2">
         {tags.map(tag => (
-          <span key={tag} className="text-[10px] uppercase tracking-widest font-bold text-cyan-700 bg-cyan-950/30 px-2 py-1 border border-cyan-900/30 group-hover:border-cyan-500/30 group-hover:text-cyan-300 transition-colors">
+          <span key={tag} className="text-[9px] uppercase tracking-widest font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded-sm transition-colors group-hover:bg-slate-900 group-hover:text-white">
             {tag}
           </span>
         ))}
@@ -261,7 +260,7 @@ function SocialLink({ href, label }: { href: string, label: string }) {
       href={href} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="text-xs font-bold tracking-widest text-cyan-700 hover:text-cyan-400 hover:drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] transition-all"
+      className="text-[10px] font-black tracking-widest text-slate-400 hover:text-slate-900 transition-all"
     >
       {label}
     </a>
