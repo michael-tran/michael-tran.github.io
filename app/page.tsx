@@ -54,7 +54,7 @@ export default function Home() {
         <section id="work" className="py-20 space-y-12">
           <div className="flex items-end justify-between border-b border-slate-200 pb-4">
             <h2 className="text-xl font-black tracking-tighter text-slate-900">
-              // PROJECTS
+              // PROFESSIONAL
             </h2>
           </div>
 
@@ -105,6 +105,24 @@ export default function Home() {
               tags={["REACT", "JAVA", "SPRING BOOT", "SELENIUM", "JENKINS", "SONARQUBE"]}
               color="cyan"
               href="https://www.lockheedmartin.com/en-us/capabilities/undersea-warfare.html"
+            />
+          </div>
+        </section>
+
+        <section id="work" className="py-20 space-y-12">
+          <div className="flex items-end justify-between border-b border-slate-200 pb-4">
+            <h2 className="text-xl font-black tracking-tighter text-slate-900">
+              // PROJECTS
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <ProjectCard 
+              title="Terrafrom Proxmox"
+              description="Fun side project to help me manage my homelab. Experimented with IaC and see if I could get a working and repeatable wordpress instance."
+              tags={["PROXMOX", "TERRAFORM", "ANSIBLE", "KUBERNETES", ]}
+              color="cyan"
+              href="https://github.com/michael-tran/terraform-proxmox"
             />
           </div>
         </section>
