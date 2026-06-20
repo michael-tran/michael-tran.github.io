@@ -124,6 +124,13 @@ export default function Home() {
               color="cyan"
               href="https://github.com/michael-tran/terraform-proxmox"
             />
+            <ProjectCard 
+              title="Ai-therapy"
+              description="An webapp that runs an AI on the client side instead of the server side. This ensures data privacy and data security stays on the client for the client."
+              tags={["ONNX", "REACT", "PROMPT", "TYPESCRIPT", ]}
+              color="cyan"
+              href="https://michael-tran.github.io/ai-therapy/"
+            />
           </div>
         </section>
 
