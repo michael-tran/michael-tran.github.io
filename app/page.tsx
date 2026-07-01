@@ -129,7 +129,7 @@ export default function Home() {
               description="An webapp that runs an AI on the client side instead of the server side. This ensures data privacy and data security stays on the client for the client."
               tags={["ONNX", "REACT", "PROMPT", "TYPESCRIPT", ]}
               color="cyan"
-              href="https://michael-tran.github.io/ai-therapy/"
+              href="https://michael-tran.github.io/ai-chat/"
             />
           </div>
         </section>
